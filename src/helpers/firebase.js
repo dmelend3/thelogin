@@ -6,13 +6,13 @@ import "firebase/firebase-auth"
 import * as firebaseui from "firebaseui"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAN4jrRzObpWeod2HIAJwgxx4u7IwNJ_Is",
-  authDomain: "loginexample-eb517.firebaseapp.com",
-  databaseURL: "https://loginexample-eb517.firebaseio.com",
-  projectId: "loginexample-eb517",
-  storageBucket: "loginexample-eb517.appspot.com",
-  messagingSenderId: "796507056287",
-  appId: "1:796507056287:web:61a636041c8a30edd25aaa"
+  apiKey: process.env.VUE_APP_apiKey,
+  authDomain: process.env.VUE_APP_authDomain,
+  databaseURL: process.env.VUE_APP_databaseURL,
+  projectId: process.env.VUE_APP_projectId,
+  storageBucket: process.env.VUE_APP_storageBucket,
+  messagingSenderId: process.env.VUE_APP_messagingSenderId,
+  appId: process.env.VUE_APP_appId
 }
 
 firebase.initializeApp(firebaseConfig)

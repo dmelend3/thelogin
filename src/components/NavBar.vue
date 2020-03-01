@@ -27,7 +27,7 @@
       <router-link
       v-if="user"
       class="p-2 mx-1 hover:text-purple-900 hover:bg-gray-300"
-      to="/public"
+      to="/private"
       >Private</router-link
       >
     </div>
@@ -42,6 +42,13 @@ export default {
       return this.$store.getters.getUser 
     }
   },
+  methods: {
+    logout() {
+      this.$firebase.auth().signOut()
+      this.$store.dispatch("setUser", "")
+      this.$store.push("/")      
+    }
+  }
 };
 </script>
 
